@@ -1,0 +1,38 @@
+<h2 class="content-title">Liste des freelancer</h2>
+
+<div class="frelancers">
+  <article
+    class="freelancer"
+    *ngFor="let freelancer of freelancers; let i = index"
+  >
+    <figure class="freelancer__picture">
+      <img
+        src="https://ui-avatars.com/api/?background=cccccc&color=fff&size=100&name={{
+          freelancer.name
+        }}"
+        alt=""
+      />
+    </figure>
+    <h3 class="freelancer__name">{{ freelancer.name }}</h3>
+    <h4 class="freelancer__username">{{ freelancer.username }}</h4>
+    <div class="freelancer__detail ">
+      <span>Email :</span>
+      <span
+        ><a href="mailto:{{ freelancer.email }}">
+          {{ freelancer.email }}</a
+        ></span
+      >
+    </div>
+    <div class="freelancer__detail">
+      <span>Téléphone :</span>
+      <span
+        ><a href="tel:{{ freelancer.phone }}">{{ freelancer.phone }}</a></span
+      >
+    </div>
+    <div class="freelancer__detail">
+      <span>ville</span>
+      <span>{{ freelancer.address.city }}</span>
+    </div>
+  </article>
+  <article class="freelancer">+</article>
+</div>
