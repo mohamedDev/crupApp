@@ -5,6 +5,30 @@
     class="freelancer"
     *ngFor="let freelancer of freelancers; let i = index"
   >
+    <div class="freelancer__actions">
+      <a
+        href="#"
+        (click)="deleteFreelancer(freelancer.id)"
+        class="freelancer__edit"
+      >
+        <img
+          src="./assets/icons/delete-button.svg"
+          alt="Supprimer"
+          width="20"
+        />
+      </a>
+      <a
+        href="#"
+        (click)="deleteFreelancer(freelancer.id)"
+        class="freelancer__delete"
+      >
+        <img
+          src="./assets/icons/delete-button.svg"
+          alt="Supprimer"
+          width="20"
+        />
+      </a>
+    </div>
     <figure class="freelancer__picture">
       <img
         src="https://ui-avatars.com/api/?background=cccccc&color=fff&size=100&name={{
@@ -14,7 +38,10 @@
       />
     </figure>
     <h3 class="freelancer__name">{{ freelancer.name }}</h3>
-    <h4 class="freelancer__username">{{ freelancer.username }}</h4>
+    <h4 class="freelancer__username">{{ freelancer.jobs }}</h4>
+    <h5 class="freelancer__rate">
+      ${{ freelancer.hourlyrate }} <span class="freelancer__unit">USD/hr</span>
+    </h5>
     <div class="freelancer__detail ">
       <span>Email :</span>
       <span
@@ -33,6 +60,7 @@
       <span>ville</span>
       <span>{{ freelancer.address.city }}</span>
     </div>
+    <a href="#" class="btn btn-info">profile</a>
   </article>
   <article class="freelancer">+</article>
 </div>

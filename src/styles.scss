@@ -161,6 +161,7 @@ ol {
   text-align: center;
   border: 0 solid transparent;
   border-radius: 5px;
+  position: relative;
 }
 
 .freelancer__picture {
@@ -202,4 +203,56 @@ ol {
   a {
     color: #0174ef;
   }
+
+  + .btn {
+    margin-top: 20px;
+  }
+}
+
+.freelancer__rate {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.freelancer__unit {
+  font-weight: normal;
+  font-size: 0.8rem;
+  color: green;
+}
+
+.freelancer__action {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: inherit;
+}
+
+/*---------------------------------------*\
+    btn
+\*---------------------------------------*/
+
+.btn {
+  background: -webkit-linear-gradient(top, #fff 0, #f0f0f0 100%);
+  background: linear-gradient(to bottom, #fff 0, #f0f0f0 100%);
+  border: 1px solid #bec0c2;
+  font-weight: normal;
+  padding: 5px 20px;
+  font-size: 1rem;
+  background-clip: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  line-height: 20px;
+  text-align: center;
+}
+
+.btn-info {
+  background: -webkit-linear-gradient(top, #139ff0 0, #0087e0 100%);
+  background: linear-gradient(to bottom, #139ff0 0, #0087e0 100%);
+  border: 1px solid #0087e0;
+  color: #f7f7f7;
+  text-shadow: 0 -1px transparent;
+  width: 100%;
 }

@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Mohamed BOUAZIZ",
+      "jobs": "FrontEnd developper",
+      "email": "mohamed_bouaziz@hotmail.fr",
+      "hourlyrate": 50,
+      "address": {
+        "street": "route manzel chaker km 3.5, ruelle dammak",
+        "country": "Tunisie",
+        "city": "Sfax",
+        "zipcode": "3013"
+      },
+      "phone": "20 044 924",
+      "website": "https://mohamed-bouaziz.com",
+      "about": "We are very well versed in SEO, achieving top 10 1st page results in Google for every keyword we have targeted."
+    },
+    {
+      "id": 1,
+      "name": "jonathan feerz",
+      "jobs": "PHP developper",
+      "email": "jonathan@april.com",
+      "hourlyrate": 25,
+      "address": {
+        "street": "Kulas Light",
+        "city": "sfatx",
+        "zipcode": "92998-3874"
+      },
+      "phone": " 20 044 924",
+      "website": "https://mohamed-bouaziz.com",
+      "about": "We are very well versed in SEO, achieving top 10 1st page results in Google for every keyword we have targeted."
+    }
+  ]
+}
