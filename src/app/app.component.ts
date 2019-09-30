@@ -9,6 +9,7 @@ import { LoaderService } from "./shared/services/loader.service";
 })
 export class AppComponent implements OnInit {
   loader: boolean;
+  showhidenav: boolean;
 
   constructor(private loaderservices: LoaderService) {}
 
@@ -16,5 +17,10 @@ export class AppComponent implements OnInit {
     this.loaderservices.status.subscribe(value => {
       this.loader = value;
     });
+  }
+
+  toggleNav(event) {
+    event.preventDefault();
+    this.showhidenav = !this.showhidenav;
   }
 }

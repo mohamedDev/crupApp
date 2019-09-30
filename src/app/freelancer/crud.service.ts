@@ -1,3 +1,4 @@
+import { freelancer } from "./models/freelancer";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable, Subject } from "rxjs";
@@ -13,45 +14,55 @@ export class CrudService {
 
   constructor(private http: HttpClient) {}
 
-  getAllFreelancer(): Observable<any> {
+  /*
+   * get all freelancer freelancer
+   */
+  getAllFreelancer(): Observable<freelancer[]> {
     return this.http
-      .get(environment.APIEndpoint + "users")
+      .get<freelancer[]>(environment.APIEndpoint + "users")
       .pipe(map(data => data));
   }
 
-  addFreelancer(formdata): Observable<any> {
+  /*
+   * add freelancer
+   */
+  addFreelancer(formdata): Observable<freelancer> {
     let headers = new HttpHeaders();
     headers = headers.append("Content-type", "application/json; charset=UTF-8");
-
     const options = { headers: headers };
-
-    return this.http.post<any>(
+    return this.http.post<freelancer>(
       environment.APIEndpoint + "users",
       formdata,
       options
     );
   }
 
-  editFreelancer(formdata): Observable<any> {
+  /*
+   * edit freelancer
+   */
+  editFreelancer(formdata): Observable<freelancer> {
     let headers = new HttpHeaders();
     headers = headers.append("Content-type", "application/json; charset=UTF-8");
-
     const options = { headers: headers };
-
     console.log(formdata["id"]);
-    return this.http.put<any>(
+    return this.http.put<freelancer>(
       environment.APIEndpoint + "users/" + formdata["id"],
       formdata,
       options
     );
   }
 
+  /*
+   * delete freelancer
+   */
   deleteFrelancer(id): Observable<any> {
-    console.log(id);
     return this.http.delete(environment.APIEndpoint + "users/" + id);
   }
 
-  getFreelancrById(id): Observable<any> {
-    return this.http.get(environment.APIEndpoint + "users/" + id);
+  /*
+   * get freelancer by id
+   */
+  getFreelancrById(id): Observable<freelancer> {
+    return this.http.get<freelancer>(environment.APIEndpoint + "users/" + id);
   }
 }

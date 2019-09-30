@@ -1,34 +1,52 @@
-<!--app sidebar-->
-<app-sidebar></app-sidebar>
+<div [ngClass]="{ shownav: showhidenav }">
+  <!--app sidebar-->
+  <app-sidebar></app-sidebar>
 
-<!--app header-->
-<app-header></app-header>
-<div class="loader" [hidden]="!loader">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="38"
-    height="38"
-    viewBox="0 0 38 38"
-    stroke="red"
+  <!--app header-->
+  <app-header></app-header>
+  <!--icon to show nav when mobile-->
+  <a href="#"></a>
+
+  <div
+    class="toggle-nav"
+    (click)="toggleNav($event)"
+    [ngClass]="{ isopen: showhidenav }"
   >
-    <g fill="none" fill-rule="evenodd">
-      <g transform="translate(1 1)" stroke-width="2">
-        <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
-        <path d="M36 18c0-9.94-8.06-18-18-18" transform="rotate(60.115 18 18)">
-          <animateTransform
-            attributeName="transform"
-            type="rotate"
-            from="0 18 18"
-            to="360 18 18"
-            dur="1s"
-            repeatCount="indefinite"
-          />
-        </path>
-      </g>
-    </g>
-  </svg>
-</div>
+    <span></span>
+  </div>
 
-<section class="content">
-  <router-outlet></router-outlet>
-</section>
+  <!--app header-->
+  <section class="content">
+    <router-outlet></router-outlet>
+  </section>
+
+  <!--loader displayed when XHR start-->
+  <div class="loader" [hidden]="!loader">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="38"
+      height="38"
+      viewBox="0 0 38 38"
+      stroke="red"
+    >
+      <g fill="none" fill-rule="evenodd">
+        <g transform="translate(1 1)" stroke-width="2">
+          <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
+          <path
+            d="M36 18c0-9.94-8.06-18-18-18"
+            transform="rotate(60.115 18 18)"
+          >
+            <animateTransform
+              attributeName="transform"
+              type="rotate"
+              from="0 18 18"
+              to="360 18 18"
+              dur="1s"
+              repeatCount="indefinite"
+            />
+          </path>
+        </g>
+      </g>
+    </svg>
+  </div>
+</div>

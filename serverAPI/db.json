@@ -12,17 +12,17 @@
       "zipcode": "3013",
       "phone": "20 044 924",
       "website": "https://mohamed-bouaziz.com",
-      "about": "We are very well versed in SEO, achieving top 10 1st page results in Google for every keyword we have targeted."
+      "about": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié."
     },
     {
       "id": 2,
-      "name": "nadia bouaziz",
-      "email": "jonathan@april.com",
+      "name": "Nadia bouaziz",
+      "email": "nadia_bouaziz@april.com",
       "jobs": "PHP developper",
-      "phone": " 20 044 924",
+      "phone": " 20 888 924",
       "hourlyrate": 25,
-      "website": "https://mohamed-bouaziz.com",
-      "about": "We are very well versed in SEO, achieving top 10 1st page results in Google for every keyword we have targeted.",
+      "website": "https://nadia.com",
+      "about": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié.",
       "country": "france",
       "city": "paris",
       "zipcode": "6668-445",
@@ -30,59 +30,17 @@
     },
     {
       "id": 3,
-      "name": "Mohamed BOUAZIZ",
-      "jobs": "FrontEnd developper",
+      "name": "Ahmed milaio",
+      "jobs": "Java developper",
       "email": "mohamed_bouaziz@hotmail.fr",
       "hourlyrate": 50,
-      "street": "route manzel chaker km 3.5, ruelle dammak",
+      "street": "route manzel chaker km 5, ruelle dammak",
       "country": "Tunisie",
       "city": "Sfax",
-      "zipcode": "3013",
-      "phone": "20 044 924",
-      "website": "https://mohamed-bouaziz.com",
-      "about": "We are very well versed in SEO, achieving top 10 1st page results in Google for every keyword we have targeted."
-    },
-    {
-      "id": 4,
-      "name": "jonathan feerz",
-      "jobs": "PHP developper",
-      "email": "jonathan@april.com",
-      "hourlyrate": 25,
-      "street": "Kulas Light",
-      "country": "france",
-      "city": "paris",
-      "zipcode": "6668-445",
-      "phone": " 20 044 924",
-      "website": "https://mohamed-bouaziz.com",
-      "about": "We are very well versed in SEO, achieving top 10 1st page results in Google for every keyword we have targeted."
-    },
-    {
-      "id": 5,
-      "name": "Mohamed BOUAZIZ",
-      "jobs": "FrontEnd developper",
-      "email": "mohamed_bouaziz@hotmail.fr",
-      "hourlyrate": 50,
-      "street": "route manzel chaker km 3.5, ruelle dammak",
-      "country": "Tunisie",
-      "city": "Sfax",
-      "zipcode": "3013",
-      "phone": "20 044 924",
-      "website": "https://mohamed-bouaziz.com",
-      "about": "We are very well versed in SEO, achieving top 10 1st page results in Google for every keyword we have targeted."
-    },
-    {
-      "id": 6,
-      "name": "jonathan feerz",
-      "jobs": "PHP developper",
-      "email": "jonathan@april.com",
-      "hourlyrate": 25,
-      "street": "Kulas Light",
-      "country": "france",
-      "city": "paris",
-      "zipcode": "6668-445",
-      "phone": " 20 044 924",
-      "website": "https://mohamed-bouaziz.com",
-      "about": "We are very well versed in SEO, achieving top 10 1st page results in Google for every keyword we have targeted."
+      "zipcode": "3015",
+      "phone": "20 963 924",
+      "website": "https://ahmed.com",
+      "about": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié."
     },
     {
       "id": 7,
@@ -96,7 +54,7 @@
       "country": "Tunisie",
       "city": "Sfax",
       "zipcode": "888888",
-      "street": "Route manzel chaker km 5"
+      "street": "Route alainr km 8"
     }
   ]
 }

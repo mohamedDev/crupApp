@@ -58,7 +58,9 @@ export class EditComponent implements OnInit {
     this.manageFreelancer
       .editFreelancer(this.editForm.value)
       .subscribe(data => {
-        this.router.navigate(["/freelancer"]);
+        setTimeout(() => {
+          this.router.navigate(["/freelancer"]);
+        }, 1000);
       });
   }
 

@@ -1,3 +1,4 @@
+import { freelancer } from "./../models/freelancer";
 import { CrudService } from "./../crud.service";
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
@@ -8,7 +9,7 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./view.component.scss"]
 })
 export class ViewComponent implements OnInit {
-  freelancer = {};
+  freelancer = new freelancer();
 
   constructor(
     private route: ActivatedRoute,

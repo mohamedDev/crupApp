@@ -48,7 +48,9 @@ export class AddComponent implements OnInit {
     this.manageFreelancer
       .addFreelancer(JSON.stringify(this.registerForm.value, null, 4))
       .subscribe(data => {
-        this.router.navigate(["/freelancer"]);
+        setTimeout(() => {
+          this.router.navigate(["/freelancer"]);
+        }, 1000);
       });
   }
 
