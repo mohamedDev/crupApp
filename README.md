@@ -1,10 +1,27 @@
-# Crudapp
-
+# Crudapp (Freelancers Store profile)- BY mohamed BOUAZIZ
+ 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
+
+This project contain :
+
+Crud for freelancers profile.
+
+Filter by freelancer name.
+
+Sort by hourly rate.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## API server
+Required server "json-server"
+
+Run "npm install -g json-server".
+
+Run "json-server db.json" on server folder of the project.
+
+if you wont to swith local API server you must change tow file of viriable envirement of angular "src/environements".
 
 ## Code scaffolding
 
