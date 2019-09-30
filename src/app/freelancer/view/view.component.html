@@ -1,1 +1,58 @@
-<p>view works!</p>
+<article class="freelancer freelancer--details">
+  <div class="freelancer__actions">
+    <a
+      class="freelancer__edit"
+      [routerLink]="['/freelancer/edit', freelancer.id]"
+    >
+      <img src="./assets/icons/edit.svg" alt="Supprimer" width="30" />
+    </a>
+  </div>
+  <figure class="freelancer__picture">
+    <img
+      src="https://ui-avatars.com/api/?background=cccccc&color=fff&size=100&name={{
+        freelancer.name
+      }}"
+      alt=""
+    />
+  </figure>
+  <h3 class="freelancer__name">{{ freelancer.name }}</h3>
+  <h4 class="freelancer__username">{{ freelancer.jobs }}</h4>
+  <h5 class="freelancer__rate">
+    ${{ freelancer.hourlyrate }} <span class="freelancer__unit">USD/hr</span>
+  </h5>
+  <div class="freelancer__detail ">
+    <span>Email :</span>
+    <span
+      ><a href="mailto:{{ freelancer.email }}"> {{ freelancer.email }}</a></span
+    >
+  </div>
+  <div class="freelancer__detail">
+    <span>Téléphone :</span>
+    <span
+      ><a href="tel:{{ freelancer.phone }}">{{ freelancer.phone }}</a></span
+    >
+  </div>
+  <div class="freelancer__detail">
+    <span>Pays</span>
+    <span>{{ freelancer.country }}</span>
+  </div>
+  <div class="freelancer__detail">
+    <span>ville</span>
+    <span>{{ freelancer.city }}</span>
+  </div>
+  <div class="freelancer__detail">
+    <span>Adresse</span>
+    <span>{{ freelancer.street }}</span>
+  </div>
+  <div class="freelancer__detail">
+    <span>Code postale</span>
+    <span>{{ freelancer.zipcode }}</span>
+  </div>
+  <div class="freelancer__detail">
+    <span>Site web</span>
+    <span>{{ freelancer.website }}</span>
+  </div>
+  <div class="freelancer__detail">
+    <span>{{ freelancer.about }}</span>
+  </div>
+</article>

@@ -16,17 +16,18 @@
     },
     {
       "id": 2,
-      "name": "nadia bouaziz",
-      "email": "jonathan@april.com",
+      "name": "jonathan feerz",
       "jobs": "PHP developper",
-      "phone": " 20 044 924",
+      "email": "jonathan@april.com",
       "hourlyrate": 25,
-      "website": "https://mohamed-bouaziz.com",
-      "about": "We are very well versed in SEO, achieving top 10 1st page results in Google for every keyword we have targeted.",
+
+      "street": "Kulas Light",
       "country": "france",
       "city": "paris",
       "zipcode": "6668-445",
-      "street": "Kulas Light"
+      "phone": " 20 044 924",
+      "website": "https://mohamed-bouaziz.com",
+      "about": "We are very well versed in SEO, achieving top 10 1st page results in Google for every keyword we have targeted."
     },
     {
       "id": 3,
@@ -85,18 +86,18 @@
       "about": "We are very well versed in SEO, achieving top 10 1st page results in Google for every keyword we have targeted."
     },
     {
-      "id": 7,
-      "name": "Fares mhiri",
-      "email": "fares_mhiri@gmail.com",
-      "jobs": "Ingénieur recherche et développement ",
-      "phone": "55 88 77 99",
-      "hourlyrate": 50,
-      "website": "",
-      "about": "je suis un ingénieur recherche et développement indépendant",
-      "country": "Tunisie",
-      "city": "Sfax",
-      "zipcode": "888888",
-      "street": "Route manzel chaker km 5"
+      "name": "ichrak abid",
+      "email": "ichrak_abid@hotmail.fr",
+      "jobs": "PHP/DRUPAL developer ",
+      "phone": "558877441",
+      "hourlyrate": 80,
+      "website": "https://ichrak-abid.com",
+      "about": "je teste encore",
+      "country": "tunisie",
+      "city": "sfax",
+      "zipcode": "3013",
+      "street": "route manzel chaker km 3.5",
+      "id": 7
     }
   ]
 }

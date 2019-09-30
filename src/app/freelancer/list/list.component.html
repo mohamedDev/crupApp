@@ -1,4 +1,12 @@
-<h2 class="content-title">Liste des freelancer</h2>
+<h2 class="content-title">
+  Liste des freelancer
+  <span type="button" (click)="sortByHourlyRate()" class="sort">
+    Trier par taux horaire
+    <span class="sort-direction" class="icon-sort direction-{{ class }}"
+      >></span
+    >
+  </span>
+</h2>
 
 <div class="frelancers">
   <article
@@ -6,26 +14,14 @@
     *ngFor="let freelancer of freelancers; let i = index"
   >
     <div class="freelancer__actions">
-      <a
-        href="#"
-        (click)="deleteFreelancer(freelancer.id)"
-        class="freelancer__edit"
-      >
-        <img
-          src="./assets/icons/delete-button.svg"
-          alt="Supprimer"
-          width="20"
-        />
+      <a class="freelancer__edit" [routerLink]="['edit', freelancer.id]">
+        <img src="./assets/icons/edit.svg" alt="Supprimer" width="30" />
       </a>
-      <a
-        href="#"
-        (click)="deleteFreelancer(freelancer.id)"
-        class="freelancer__delete"
-      >
+      <a (click)="deleteFreelancer(freelancer.id)" class="freelancer__delete">
         <img
           src="./assets/icons/delete-button.svg"
           alt="Supprimer"
-          width="20"
+          width="30"
         />
       </a>
     </div>
@@ -57,10 +53,11 @@
       >
     </div>
     <div class="freelancer__detail">
-      <span>ville</span>
-      <span>{{ freelancer.address.city }}</span>
+      <span>Pays</span>
+      <span>{{ freelancer.country }}</span>
     </div>
-    <a href="#" class="btn btn-info">profile</a>
+    <a [routerLink]="['view', freelancer.id]" class="btn btn-info"
+      >voir profile</a
+    >
   </article>
-  <article class="freelancer">+</article>
 </div>

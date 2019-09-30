@@ -1,1 +1,139 @@
-<p>add works!</p>
+<h2 class="content-title">Ajouter un freelancer</h2>
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <ul class="flex-outer">
+    <li>
+      <label for="name">Nom & Prenom *</label>
+      <input
+        id="name"
+        type="text"
+        formControlName="name"
+        class="form-control"
+      />
+      <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+        <div *ngIf="f.name.errors.required">Nom est requis</div>
+      </div>
+    </li>
+
+    <li>
+      <label for="email">Email *</label>
+      <input
+        id="email"
+        type="text"
+        formControlName="email"
+        class="form-control"
+      />
+      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+        <div *ngIf="f.email.errors.required">Email est requis</div>
+        <div *ngIf="f.email.errors.email">
+          L'email doit être valide
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <label for="tel">Téléphone *</label>
+      <input id="tel" type="tel" formControlName="phone" class="form-control" />
+      <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+        <div *ngIf="f.phone.errors.required">Téléphone est requis</div>
+      </div>
+    </li>
+
+    <li>
+      <label for="jobs">Profession *</label>
+      <input
+        id="jobs"
+        type="text"
+        formControlName="jobs"
+        class="form-control"
+      />
+      <div *ngIf="submitted && f.jobs.errors" class="invalid-feedback">
+        <div *ngIf="f.jobs.errors.required">Profession est requis</div>
+      </div>
+    </li>
+    <li>
+      <label for="hourlyrate">Taux horaire *</label>
+      <input
+        id="hourlyrate"
+        type="number"
+        formControlName="hourlyrate"
+        class="form-control"
+      />
+      <div *ngIf="submitted && f.hourlyrate.errors" class="invalid-feedback">
+        <div *ngIf="f.hourlyrate.errors.required">Taux horaire est requis</div>
+      </div>
+    </li>
+
+    <li>
+      <label for="website">Site web</label>
+      <input
+        id="website"
+        type="text"
+        formControlName="website"
+        class="form-control"
+      />
+      <div *ngIf="submitted && f.website.errors" class="invalid-feedback">
+        <div *ngIf="f.website.errors?.urlValid">
+          Domaine invalide Exp : https://test.com
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <label for="country">Pays *</label>
+      <input
+        id="country"
+        type="text"
+        formControlName="country"
+        class="form-control"
+      />
+      <div *ngIf="submitted && f.country.errors" class="invalid-feedback">
+        <div *ngIf="f.country.errors.required">Pays est requis</div>
+      </div>
+    </li>
+    <li>
+      <label for="city">Ville *</label>
+      <input
+        id="city"
+        type="text"
+        formControlName="city"
+        class="form-control"
+      />
+      <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+        <div *ngIf="f.city.errors.required">ville est requis</div>
+      </div>
+    </li>
+    <li>
+      <label>Ruelle</label>
+      <input type="text" formControlName="street" class="form-control" />
+    </li>
+    <li>
+      <label for="zipcode">Code postale *</label>
+      <input
+        id="zipcode"
+        type="text"
+        formControlName="zipcode"
+        class="form-control"
+      />
+      <div *ngIf="submitted && f.zipcode.errors" class="invalid-feedback">
+        <div *ngIf="f.zipcode.errors.required">Code postale est requis</div>
+      </div>
+    </li>
+    <li>
+      <label for="about">A propos</label>
+      <textarea
+        rows="6"
+        id="about"
+        formControlName="about"
+        class="form-control"
+        placeholder="Description de votre parcours professionnel"
+      ></textarea>
+    </li>
+  </ul>
+  <div class="from-action">
+    <button class="btn" type="reset" (click)="resetFrom()">
+      Annuler
+    </button>
+    <button type="submit" class="btn">Ajouter</button>
+  </div>
+</form>

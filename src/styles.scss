@@ -143,17 +143,16 @@ ol {
     cards
 \*---------------------------------------*/
 
-.frelancers {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.frelancers::after {
+  clear: both;
 }
 
 .freelancer {
-  width: 32%;
-  flex: 0 0 32%;
-  max-width: 32%;
+  width: 24%;
+  max-width: 24%;
+  min-width: 260px;
+  float: left;
+  margin: 0 0.5%;
   margin-bottom: 25px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
   background: #ffffff;
@@ -221,11 +220,54 @@ ol {
   color: green;
 }
 
-.freelancer__action {
+.freelancer__actions {
   position: absolute;
-  left: 0;
-  right: 0;
-  text-align: inherit;
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  text-align: initial;
+  display: flex;
+  justify-content: space-between;
+
+  > a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #cccccc;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 6px;
+    cursor: pointer;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: #aaaaaa;
+      img {
+        opacity: 0.6;
+      }
+    }
+
+    img {
+      opacity: 0.3;
+    }
+  }
+}
+
+.freelancer--details {
+  width: 100%;
+  min-width: 260px;
+  max-width: inherit;
+  float: none;
+  margin: 0;
+  margin-bottom: 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  padding: 20px;
+  text-align: center;
+  border: 0 solid transparent;
+  border-radius: 5px;
+  position: relative;
 }
 
 /*---------------------------------------*\
@@ -233,9 +275,7 @@ ol {
 \*---------------------------------------*/
 
 .btn {
-  background: -webkit-linear-gradient(top, #fff 0, #f0f0f0 100%);
-  background: linear-gradient(to bottom, #fff 0, #f0f0f0 100%);
-  border: 1px solid #bec0c2;
+  border: 1px solid #e22c6e;
   font-weight: normal;
   padding: 5px 20px;
   font-size: 1rem;
@@ -246,13 +286,164 @@ ol {
   -webkit-font-smoothing: antialiased;
   line-height: 20px;
   text-align: center;
+  background: white;
+  color: #e22c6e;
 }
 
-.btn-info {
-  background: -webkit-linear-gradient(top, #139ff0 0, #0087e0 100%);
-  background: linear-gradient(to bottom, #139ff0 0, #0087e0 100%);
-  border: 1px solid #0087e0;
-  color: #f7f7f7;
+.btn-info,
+.btn-validate {
   text-shadow: 0 -1px transparent;
   width: 100%;
+  transition: all linear 0.2s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: #ffffff;
+    background: #e22c6e;
+  }
+}
+.btn-validate {
+  width: auto;
+}
+
+/*---------------------------------------*\
+    flex form
+\*---------------------------------------*/
+
+.flex-outer,
+.flex-inner {
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+}
+
+.flex-outer {
+  max-width: 800px;
+
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 8px;
+  justify-content: space-between;
+}
+
+.flex-outer {
+  > li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  li {
+    label {
+      padding: 8px;
+      font-weight: 300;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    p {
+      padding: 8px;
+      font-weight: 300;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      flex: 1 0 120px;
+      max-width: 220px;
+    }
+  }
+
+  > li > label {
+    flex: 1 0 120px;
+    max-width: 220px;
+  }
+
+  > li > label + * {
+    flex: 1 0 220px;
+  }
+}
+
+.flex-inner {
+  flex: 1 0 220px;
+}
+
+.flex-outer li {
+  p {
+    margin: 0;
+  }
+
+  input:not([type="checkbox"]),
+  textarea {
+    padding: 15px;
+    border: none;
+  }
+}
+
+.flex-inner li {
+  width: 100px;
+}
+
+.invalid-feedback {
+  position: absolute;
+  right: 0;
+  border-radius: 5px;
+  max-width: 150px;
+  color: red;
+  font-size: 0.8rem;
+  padding: 5px;
+  border: 1px solid red;
+  text-align: right;
+}
+
+.from-action {
+  padding: 20px 0;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*---------------------------------------*\
+    loader - index 9999
+\*---------------------------------------*/
+.loader {
+  position: fixed;
+  top: 30px;
+  right: 10px;
+  z-index: 9999;
+}
+
+/*---------------------------------------*\
+    sort bloc - index 9999
+\*---------------------------------------*/
+
+.sort {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #e22c6e;
+  margin-left: 50px;
+  padding: 3px 20px;
+  border-radius: 3px;
+  border: 1px solid #e22c6e;
+}
+.icon-sort {
+  transition: all linear 0.2s;
+  display: inline-block;
+
+  &.direction-0 {
+    display: none;
+  }
+  &.direction-1 {
+    transform: rotate(90deg);
+  }
+  &.direction-2 {
+    transform: rotate(270deg);
+  }
 }
